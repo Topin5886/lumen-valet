@@ -59,14 +59,6 @@ export default function PortraitsSection() {
                 <p className="text-xs uppercase tracking-[0.25em] text-acid">{portrait.tag}</p>
               </div>
             </div>
-            {portrait.badge && (
-              <span
-                className="absolute -left-3 -top-3 z-20 -rotate-[8deg] rounded-xl px-3 py-1 font-display text-sm font-bold uppercase tracking-wider text-white shadow-lg"
-                style={{ backgroundColor: "#2bff00", boxShadow: "0 4px 14px rgba(43,255,0,0.45)" }}
-              >
-                {portrait.badge}
-              </span>
-            )}
           </motion.div>
         ))}
       </div>

@@ -11,7 +11,7 @@ export default function ContactSection() {
         className="flex flex-col gap-6"
       >
         <span className="font-display text-xs uppercase tracking-[0.4em] text-haze">
-          06 — Contact
+          07 — Contact
         </span>
         <a
           href="mailto:designlumenvalet@gmail.com"

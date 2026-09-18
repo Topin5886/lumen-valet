@@ -5,6 +5,7 @@ const words = [
   "Design Graphique",
   "Photographie",
   "Campagnes",
+  "Développement Web",
 ];
 
 export default function Marquee() {

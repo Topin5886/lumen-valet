@@ -11,9 +11,9 @@ import ProjectsSection from "./components/ProjectsSection";
 import LogosSection from "./components/LogosSection";
 import IdentitySection from "./components/IdentitySection";
 import PortraitsSection from "./components/PortraitsSection";
+import WebProjectsSection from "./components/WebProjectsSection";
 import AboutSection from "./components/AboutSection";
 import ContactSection from "./components/ContactSection";
-import DiscordSection from "./components/DiscordSection";
 import Footer from "./components/Footer";
 import { CursorProvider } from "./context/CursorContext";
 
@@ -65,11 +65,11 @@ export default function App() {
             <IdentitySection />
             <LogosSection />
             <PortraitsSection />
+            <WebProjectsSection />
             <AboutSection />
           </main>
 
           <ContactSection />
-          <DiscordSection />
           <Footer />
         </motion.div>
       </div>

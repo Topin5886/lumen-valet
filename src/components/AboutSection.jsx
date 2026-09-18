@@ -11,7 +11,7 @@ export default function AboutSection() {
   return (
     <section id="apropos" className="px-6 py-28 md:px-12 md:py-40">
       <div className="mb-16 md:mb-24">
-        <SectionHeading index="05" label="Studio" title="À propos" />
+        <SectionHeading index="06" label="Studio" title="À propos" />
       </div>
 
       <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20">

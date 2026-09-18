@@ -69,21 +69,10 @@ export default function ProjectsSection() {
                 </span>
               </div>
 
-              {!project.badge && (
-                <div className="absolute left-6 top-6 text-xs uppercase tracking-[0.25em] text-haze opacity-80 transition-opacity duration-300 group-hover:opacity-0">
-                  {String(i + 1).padStart(2, "0")}
-                </div>
-              )}
+              <div className="absolute left-6 top-6 text-xs uppercase tracking-[0.25em] text-haze opacity-80 transition-opacity duration-300 group-hover:opacity-0">
+                {String(i + 1).padStart(2, "0")}
+              </div>
             </div>
-
-            {project.badge && (
-              <span
-                className="absolute -left-3 -top-3 z-20 -rotate-[8deg] rounded-xl px-3 py-1 font-display text-sm font-bold uppercase tracking-wider text-white shadow-lg"
-                style={{ backgroundColor: "#2bff00", boxShadow: "0 4px 14px rgba(43,255,0,0.45)" }}
-              >
-                {project.badge}
-              </span>
-            )}
           </motion.div>
         ))}
       </div>

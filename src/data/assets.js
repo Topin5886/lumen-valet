@@ -25,7 +25,7 @@ import lumenLogoAcidMark from "../assets/LUMENLOGO-2 acid.png";
 import topinFernLogo from "../assets/TOPIN.png";
 import edCameraLogo from "../assets/emmanuelle doppia photographie2.png";
 import lumenHeartIcon from "../assets/lumen coeur noir.png";
-import olimpusServerIcon from "../assets/limpus server.png";
+import olimpusAvatar from "../assets/limpus server.png";
 import jdeLogo from "../assets/unnamed (1).jpg";
 
 // ---- IDENTITÉ DE MARQUE (packaging / déclinaisons) ----------------------
@@ -50,7 +50,6 @@ import llSignaletique from "../assets/face avant 3.png";
 import julesBusinessCard from "../assets/face arrière 3.png";
 
 // ---- PROJETS (campagnes / direction artistique) -------------------------
-import levis from "../assets/levis blue.webp";
 import nikeSkate from "../assets/nike skate just do it.png";
 import nikeJustDoIt from "../assets/nike just do it rose.png";
 import theNorthFace from "../assets/the north face blue.png";
@@ -112,6 +111,15 @@ import natureFlowerPhoto from "../assets/landscape-nature-blossom-plant-photogra
 import macroLips from "../assets/Échelle Sans titre-4 Topaz Gigapixel 2x.png";
 import macroGoldTeeth from "../assets/Échelle qipqfgblmpb51 Topaz Gigapixel 2x.png";
 
+// ---- IMAGES PUBLIQUES (/public/assets) -----------------------------------
+// Servies telles quelles, préfixées par la base Vite ("/lumen-valet/").
+const publicAsset = (file) => `${import.meta.env.BASE_URL}assets/${file}`;
+
+const josman = publicAsset("josman2.png");
+const levis = publicAsset("levis-blue.png");
+const webLaCafeteria = publicAsset("web-la-cafeteria.jpg");
+const webPhotoMl = publicAsset("web-photo-ml.jpg");
+
 export const logos = [
   { src: lumenGlobe, title: "Lumen", tag: "Globe Mark", size: "small" },
   { src: lumenMascot, title: "Lumen", tag: "Mascotte", size: "small" },
@@ -132,7 +140,7 @@ export const logos = [
   { src: topinFernLogo, title: "Topin", tag: "Emblème", size: "small" },
   { src: edCameraLogo, title: "Emmanuelle Doppia", tag: "Logo Complet", size: "wide" },
   { src: lumenHeartIcon, title: "Lumen", tag: "Icône Cœur", size: "small" },
-  { src: olimpusServerIcon, title: "Olimpus", tag: "Icône Discord", size: "small" },
+  { src: olimpusAvatar, title: "Olimpus", tag: "Avatar", size: "small" },
   { src: jdeLogo, title: "JDE", tag: "Monogramme", size: "small" },
 ];
 
@@ -160,11 +168,16 @@ export const identity = [
 
 export const projects = [
   {
+    src: josman,
+    title: "Josman",
+    description: "Affiche artiste en noir et blanc, silhouette contrastée et typographie monumentale coulante. (Fait par moi-même)",
+    size: "tall",
+  },
+  {
     src: levis,
     title: "Levi's",
     description: "Direction artistique denim, néon turquoise et lumière froide. (Fait par moi-même)",
     size: "tall",
-    badge: "NEW",
   },
   {
     src: nikeSkate,
@@ -444,6 +457,29 @@ export const portraits = [
   { src: macroGoldTeeth, title: "Sourire", tag: "Macro", size: "small" },
 ];
 
+export const webProjects = [
+  {
+    title: "La Cafétéria",
+    category: "Web App",
+    url: "https://julesvalet.github.io/la-cafeteria/",
+    domain: "julesvalet.github.io/la-cafeteria",
+    preview: webLaCafeteria,
+    description:
+      "Hub de mini-jeux à partager entre potes — Scopa, UNO, Puissance 4, Flip 7 — présentés comme un système de planètes à explorer. Comptes utilisateurs et thème clair / sombre.",
+    tags: ["Web App", "Jeux multijoueur", "Comptes", "Thème sombre"],
+  },
+  {
+    title: "Photo-ML",
+    category: "Site vitrine & boutique",
+    url: "https://photo-ml.fr/#ouverture",
+    domain: "photo-ml.fr",
+    preview: webPhotoMl,
+    description:
+      "Site de l'exposition photographique « De l'Opéra à l'Ocre » d'Emmanuelle Doppia — typographie éditoriale, mise en page immersive, boutique et espace client.",
+    tags: ["Site vitrine", "E-commerce", "Direction artistique", "Éditorial"],
+  },
+];
+
 export const brandMark = lumenMascot;
 export const logoMark = lumenLogoFace;
 
@@ -454,6 +490,9 @@ const trailModules = import.meta.glob(
 );
 // Exclut les fichiers trop lourds (upscales Gigapixel, photos brutes >2 Mo) qui plomberaient la traînée.
 const TRAIL_TOO_HEAVY = /Gigapixel|portrait Loane|landscape-nature|LUMENLOGO-2 acid|MAXIME ROUSSILLON|Audi/i;
-export const heroTrail = Object.entries(trailModules)
-  .filter(([path]) => !TRAIL_TOO_HEAVY.test(path))
-  .map(([, src]) => src);
+export const heroTrail = [
+  ...Object.entries(trailModules)
+    .filter(([path]) => !TRAIL_TOO_HEAVY.test(path))
+    .map(([, src]) => src),
+  josman, // levis-blue.png (>2 Mo) volontairement exclu, comme les autres fichiers lourds.
+];
