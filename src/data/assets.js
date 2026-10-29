@@ -16,7 +16,7 @@ import jlTopinLogo from "../assets/JL TOPIN.png";
 import lumenluxeLogo from "../assets/lumenluxe.png";
 import nouveauLogo from "../assets/NOUVEAU.png";
 import v2Logo from "../assets/V2.png";
-import laCafeteriaLogo from "../assets/la cafetaria.png";
+import plafeeWordmark from "../assets/plafee-wordmark.svg";
 import olimpsEmoji from "../assets/olimps emoji.png";
 import topinBadge from "../assets/TOPINPP.png";
 import chilLogo from "../assets/cill - Copie.png";
@@ -117,7 +117,7 @@ const publicAsset = (file) => `${import.meta.env.BASE_URL}assets/${file}`;
 
 const josman = publicAsset("josman2.png");
 const levis = publicAsset("levis-blue.png");
-const webLaCafeteria = publicAsset("web-la-cafeteria.jpg");
+const webPlafee = publicAsset("web-plafee.jpg");
 const webPhotoMl = publicAsset("web-photo-ml.jpg");
 
 export const logos = [
@@ -131,7 +131,7 @@ export const logos = [
   { src: lumenluxeLogo, title: "Lumen Luxe", tag: "Badge", size: "small" },
   { src: nouveauLogo, title: "Nouveau", tag: "Lettering", size: "small" },
   { src: v2Logo, title: "V2", tag: "Marque", size: "small" },
-  { src: laCafeteriaLogo, title: "La Cafétéria", tag: "Wordmark", size: "small" },
+  { src: plafeeWordmark, title: "PLAFEE", tag: "Wordmark", size: "small" },
   { src: olimpsEmoji, title: "Olimpus", tag: "Icône", size: "small" },
   { src: topinBadge, title: "Topin", tag: "Badge", size: "small" },
   { src: chilLogo, title: "Chil", tag: "Wordmark", size: "small" },
@@ -459,14 +459,14 @@ export const portraits = [
 
 export const webProjects = [
   {
-    title: "La Cafétéria",
+    title: "PLAFEE",
     category: "Web App",
-    url: "https://julesvalet.github.io/la-cafeteria/",
-    domain: "julesvalet.github.io/la-cafeteria",
-    preview: webLaCafeteria,
+    url: "https://topin5886.github.io/plafee/",
+    domain: "topin5886.github.io/plafee",
+    preview: webPlafee,
     description:
-      "Hub de mini-jeux à partager entre potes — Scopa, UNO, Puissance 4, Flip 7 — présentés comme un système de planètes à explorer. Comptes utilisateurs et thème clair / sombre.",
-    tags: ["Web App", "Jeux multijoueur", "Comptes", "Thème sombre"],
+      "Salle d'arcade en ligne entre potes — P4 Forge, Flip 7, Scopa, UNO, Roulette de Vérité et Le Président. Comptes joueurs, trophées, boutique de cosmétiques et classements.",
+    tags: ["Web App", "Jeux multijoueur", "Comptes", "Boutique & trophées"],
   },
   {
     title: "Photo-ML",
