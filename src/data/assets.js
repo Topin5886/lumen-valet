@@ -117,6 +117,8 @@ const publicAsset = (file) => `${import.meta.env.BASE_URL}assets/${file}`;
 
 const josman = publicAsset("josman2.png");
 const levis = publicAsset("levis-blue.png");
+const doppiaExpoAffiche = publicAsset("doppia-expo-affiche.jpg");
+const doppiaPortfolioAffiche = publicAsset("doppia-portfolio-affiche.jpg");
 const webPlafee = publicAsset("web-plafee.jpg");
 const webPhotoMl = publicAsset("web-photo-ml.jpg");
 
@@ -167,6 +169,18 @@ export const identity = [
 ];
 
 export const projects = [
+  {
+    src: doppiaExpoAffiche,
+    title: "Doppia — Expo'zition",
+    description: "Affiche de l'exposition « De l'Opéra à l'Ocre » d'Emmanuelle Doppia, typographie éditoriale et compositions photographiques. (Fait par moi-même)",
+    size: "tall",
+  },
+  {
+    src: doppiaPortfolioAffiche,
+    title: "Doppia — Portfolio",
+    description: "Couverture du portfolio photographique d'Emmanuelle Doppia, logo signature et cadrage éditorial. (Fait par moi-même)",
+    size: "tall",
+  },
   {
     src: josman,
     title: "Josman",
