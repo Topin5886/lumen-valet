@@ -492,6 +492,17 @@ export const webProjects = [
       "Site de l'exposition photographique « De l'Opéra à l'Ocre » d'Emmanuelle Doppia — typographie éditoriale, mise en page immersive, boutique et espace client.",
     tags: ["Site vitrine", "E-commerce", "Direction artistique", "Éditorial"],
   },
+  {
+    title: "Prochainement",
+    category: "En collaboration avec Photo-ML",
+    url: null,
+    domain: "collaboration · photo-ml.fr",
+    preview: null,
+    description:
+      "Un nouveau site en préparation avec Emmanuelle Doppia (Photo-ML) — direction artistique, design et développement. Ouverture prochaine.",
+    tags: ["Site vitrine", "Direction artistique", "Collaboration Photo-ML"],
+    soon: true,
+  },
 ];
 
 export const brandMark = lumenMascot;
